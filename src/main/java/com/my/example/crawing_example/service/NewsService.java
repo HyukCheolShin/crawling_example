@@ -27,6 +27,7 @@ public class NewsService {
                 String title = headline.text();
                 String link = headline.attr("href");
                 if (isTitleValid(title, includeKeywords, excludeKeywords)) {
+                	System.out.println("title : " + title + ", link : " + link);
                     newsList.add(new NewsDto(title, link));
                     count++;
                 }
